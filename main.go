@@ -35,8 +35,6 @@ func parseAndAddFeed(url string) (Feed, error) {
 		return Feed{}, err
 	}
 
-	return Feed{}, err
-
 	feed := Feed{URL: url, Read: false}
 	feed.Items = make([]FeedItem, len(parsedFeed.Items))
 	for i, item := range parsedFeed.Items {
